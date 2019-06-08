@@ -59,7 +59,9 @@ def create_logger(log_file):
 
 
 def create_dataloader(logger):
-    DATA_PATH = os.path.join('../', 'data')
+    #DATA_PATH = os.path.join('../', 'data')
+    DATA_PATH = '/scratch/datasets/'
+
 
     # create dataloader
     train_set = KittiRCNNDataset(root_dir=DATA_PATH, npoints=cfg.RPN.NUM_POINTS, split=cfg.TRAIN.SPLIT, mode='TRAIN',
